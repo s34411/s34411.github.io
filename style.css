@@ -76,8 +76,10 @@ header {
 /* --- Hero Section (หน้าแรก) --- */
 .hero-section {
     display: flex;
-    min-height: 420px;
+    min-height: 480px; /* เพิ่มความสูงขั้นต่ำให้สมดุล */
     background: linear-gradient(135deg, #f9fbfd 0%, #ffffff 100%);
+    align-items: stretch; /* บังคับให้ฝั่งซ้ายและฝั่งขวายืดสูงเท่ากันเป๊ะ */
+    overflow: hidden; /* ป้องกันรูปภาพล้นขอบมุมโค้ง */
 }
 
 .hero-left {
@@ -86,6 +88,21 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.hero-right {
+    flex: 0.85;
+    position: relative;
+    width: 100%;
+    height: 100%; /* ยืดเต็มความสูงฝั่งขวา */
+}
+
+/* คุมรูปภาพฝั่งขวาให้แนบชิดติดขอบ บน-ล่าง-ขวา พอดีเป๊ะ */
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ครอบตัดรูปให้พอดีกรอบ ไม่เบี้ยว */
+    display: block;
 }
 
 .hero-title {
