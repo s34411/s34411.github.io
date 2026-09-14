@@ -8,31 +8,49 @@
 </head>
 <body>
 
-    <!--แถบเมนูนำทาง (Navigation) -->
+    <!-- Header / Nav -->
     <header>
         <nav>
-            <div class="logo">CREATIVE DESIGN</div>
+            <div class="logo">PORTFOLIO</div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">หน้าแรก</a></li>
                 <li><a href="about.html">เกี่ยวกับฉัน</a></li>
                 <li><a href="projects.html">ผลงาน</a></li>
                 <li><a href="contact.html">ติดต่อ</a></li>
             </ul>
+            <div class="nav-right">
+                <a href="contact.html" class="btn-login">เข้าสู่ระบบ</a>
+                <a href="projects.html" class="btn-primary">เริ่มต้นใช้งาน</a>
+            </div>
         </nav>
     </header>
 
-    <!-- เนื้อหาหน้าแรก -->
-    <main class="container">
-        <section class="hero">
-            <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
-            <p>รวมผลงานการออกแบบ การพัฒนาเว็บไซต์ และทักษะโปรแกรมมิ่ง</p>
-            <a href="projects.html" class="btn">ดูผลงานทั้งหมด</a>
-        </section>
-    </main>
+    <!-- Main Content -->
+    <main class="hero-container">
+        <!-- การ์ดตกแต่งลอยซ้าย -->
+        <div class="floating-card card-left">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&q=80" alt="Card Left">
+        </div>
 
-    <footer>
-        <p>&copy; 2026 My Portfolio. All rights reserved.</p>
-    </footer>
+        <!-- เนื้อหาหลักตรงกลาง -->
+        <h1 class="hero-title">Create a website<br>without limits</h1>
+        <p class="hero-subtitle">นำไอเดียของคุณมาสร้างสรรค์เป็นผลงานจริง ด้วยเครื่องมือการพัฒนาและดีไซน์ยุคใหม่</p>
+        
+        <div>
+            <a href="projects.html" class="btn-primary" style="font-size: 1.1rem; padding: 14px 36px;">เริ่มต้นใช้งาน</a>
+        </div>
+        <p class="hero-subtext">เริ่มต้นได้ฟรี ไม่ต้องใช้บัตรเครดิต</p>
+
+        <!-- Badge ลอย -->
+        <div class="ai-badge">
+            ✨ AI Image Editor
+        </div>
+
+        <!-- การ์ดตกแต่งลอยขวา -->
+        <div class="floating-card card-right">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80" alt="Card Right">
+        </div>
+    </main>
 
 </body>
 </html>
