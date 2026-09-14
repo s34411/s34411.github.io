@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Prompt:wght@300;400;500;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,131 +8,175 @@
 
 body {
     font-family: 'Prompt', sans-serif;
-    background-color: #f4f7f9;
+    background-color: #c0cad3; /* สีพื้นหลังภายนอก */
     color: #333333;
+    padding: 40px 0;
 }
 
-/* บังคับให้อยู่ตรงกลาง ไม่ติดขอบ */
-.page-wrapper {
-    max-width: 1100px;
+/* บังคับเนื้อหาให้อยู่ตรงกลาง ไม่ติดขอบจอ */
+.site-wrapper {
+    max-width: 1050px;
     margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    min-height: 100vh;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    overflow: hidden;
+    min-height: 80vh;
 }
 
-.top-bar {
+/* --- Header Section --- */
+header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    padding: 8px 30px;
+    padding: 30px 50px;
     background-color: #ffffff;
-    font-size: 13px;
-    color: #666;
-    border-bottom: 1px solid #f0f0f0;
 }
 
-.top-bar a {
-    color: #666;
-    text-decoration: none;
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.header-logo {
-    text-align: center;
-    padding: 25px 0 15px;
+.logo-brand h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #1a1a1a;
+    font-weight: 700;
 }
 
-.header-logo h1 {
-    font-size: 28px;
-    color: #179bd7;
-    font-weight: 600;
-}
-
-.header-logo span {
-    color: #666;
-    font-size: 14px;
-    display: block;
-    font-weight: 300;
-}
-
-/* แถบเมนูกดไป-กลับได้ทุกหน้า */
-.main-nav {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    padding: 0 20px;
+.logo-brand span {
+    font-size: 11px;
+    color: #888;
+    border-left: 1px solid #ddd;
+    padding-left: 10px;
 }
 
 .main-nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
     list-style: none;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 24px;
 }
 
 .main-nav a {
-    display: block;
-    padding: 12px 16px;
     text-decoration: none;
     color: #555555;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
+    transition: color 0.2s;
 }
 
 .main-nav a:hover, .main-nav a.active {
-    color: #179bd7;
-    border-bottom: 3px solid #179bd7;
-}
-
-.main-nav .btn-contact {
-    background-color: #179bd7;
-    color: #ffffff !important;
-    border-radius: 3px;
-    padding: 8px 16px;
-}
-
-.content-area {
-    padding: 40px 30px;
-}
-
-.page-title {
-    font-size: 32px;
-    color: #179bd7;
-    margin-bottom: 30px;
+    color: #4a9bd9;
     font-weight: 500;
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+/* --- Hero Section (หน้าแรก) --- */
+.hero-section {
+    display: flex;
+    min-height: 420px;
+    background: linear-gradient(135deg, #f9fbfd 0%, #ffffff 100%);
 }
 
-.card-item {
+.hero-left {
+    flex: 1.15;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    line-height: 1.15;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: #4a9bd9;
+}
+
+.hero-desc {
+    font-size: 13.5px;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #4a9bd9;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(74, 155, 217, 0.25);
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #3b87c4;
+}
+
+.hero-right {
+    flex: 0.85;
+    background: linear-gradient(135deg, #4a9bd9 0%, #2c6e9f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 48px;
+}
+
+/* --- Content & Layout --- */
+.page-container {
+    padding: 50px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.section-title span {
+    color: #4a9bd9;
+}
+
+/* Grid การ์ดสำหรับหน้า Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.project-card {
+    border: 1px solid #edf2f7;
+    background: #ffffff;
     border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    background: #fff;
-    border: 1px solid #eef2f5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.2s;
 }
 
-.card-header-banner {
-    background-color: #00bcd4;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 15px;
-    font-size: 15px;
-    font-weight: 500;
+.project-card:hover {
+    transform: translateY(-4px);
 }
 
-/* เปลี่ยนพื้นที่รูปภาพเป็นพื้นที่ตัวอย่างสีฟ้าสวยงาม (ไม่ขึ้นกากบาทแน่นอน) */
-.card-img-placeholder {
-    width: 100%;
-    height: 160px;
-    background-color: #e0f2fe;
-    color: #0284c7;
+.card-banner {
+    background-color: #eaf4fb;
+    color: #4a9bd9;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,15 +185,26 @@ body {
 }
 
 .card-body {
-    padding: 15px;
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 8px;
 }
 
 .card-body p {
-    font-size: 13px;
+    font-size: 12.5px;
     color: #666;
     line-height: 1.6;
 }
 
+/* Responsive สำหรับมือถือ */
 @media (max-width: 768px) {
-    .cards-grid { grid-template-columns: 1fr; }
+    body { padding: 0; }
+    header { flex-direction: column; gap: 15px; }
+    .hero-section { flex-direction: column; }
+    .hero-right { min-height: 200px; }
+    .page-container { padding: 30px 20px; }
 }
