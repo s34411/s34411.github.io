@@ -76,10 +76,8 @@ header {
 /* --- Hero Section (หน้าแรก) --- */
 .hero-section {
     display: flex;
-    min-height: 480px; /* เพิ่มความสูงขั้นต่ำให้สมดุล */
+    min-height: 420px;
     background: linear-gradient(135deg, #f9fbfd 0%, #ffffff 100%);
-    align-items: stretch; /* บังคับให้ฝั่งซ้ายและฝั่งขวายืดสูงเท่ากันเป๊ะ */
-    overflow: hidden; /* ป้องกันรูปภาพล้นขอบมุมโค้ง */
 }
 
 .hero-left {
