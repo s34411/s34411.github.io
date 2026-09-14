@@ -152,12 +152,18 @@ header {
     color: #4a9bd9;
 }
 
-/* Grid การ์ดสำหรับหน้า Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* บังคับแบ่ง 3 ช่องเท่ากันเป๊ะ */
     gap: 25px;
     margin-top: 30px;
+}
+
+/* หน้าจอมือถือให้ปรับเหลือ 1 ช่องอัตโนมัติ */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card {
