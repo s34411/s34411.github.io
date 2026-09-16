@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Prompt:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Prompt:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-blue: #4a8bf5;
+    --soft-blue: #c4dcff;
+    --sky-gradient: linear-gradient(180deg, #9bbcfd 0%, #d8e5ff 100%);
+    --bg-cream: #f4f6fa;
+    --card-bg: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --y2k-purple: #8b5cf6;
+}
 
 * {
     box-sizing: border-box;
@@ -8,224 +19,244 @@
 
 body {
     font-family: 'Prompt', sans-serif;
-    background-color: #c0cad3; /* สีพื้นหลังภายนอก */
-    color: #333333;
-    padding: 40px 0;
+    background: #bdcde7;
+    color: var(--text-dark);
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* บังคับเนื้อหาให้อยู่ตรงกลาง ไม่ติดขอบจอ */
+/* กรอบเว็บไซต์สไตล์เว็บ Y2K / NewJeans UI */
 .site-wrapper {
-    max-width: 1050px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: var(--bg-cream);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
     overflow: hidden;
-    min-height: 80vh;
+    border: 4px solid #ffffff;
+    min-height: 85vh;
 }
 
-/* --- Header Section --- */
+/* Header & Navigation Bar */
 header {
+    background: var(--sky-gradient);
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
-    background-color: #ffffff;
-}
-
-.logo-brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    border-bottom: 2px solid #ffffff;
 }
 
 .logo-brand h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    letter-spacing: 2px;
-    color: #1a1a1a;
-    font-weight: 700;
-}
-
-.logo-brand span {
-    font-size: 11px;
-    color: #888;
-    border-left: 1px solid #ddd;
-    padding-left: 10px;
+    font-family: 'Cherry Bomb One', cursive, sans-serif;
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px var(--primary-blue), -2px -2px 0px var(--primary-blue), 2px -2px 0px var(--primary-blue), -2px 2px 0px var(--primary-blue);
+    letter-spacing: 1px;
 }
 
 .main-nav ul {
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap: 15px;
 }
 
 .main-nav a {
     text-decoration: none;
-    color: #555555;
-    font-size: 13px;
-    font-weight: 400;
-    transition: color 0.2s;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
 }
 
 .main-nav a:hover, .main-nav a.active {
-    color: #4a9bd9;
-    font-weight: 500;
+    background: #ffffff;
+    color: var(--primary-blue);
+    box-shadow: 0 4px 10px rgba(74, 139, 245, 0.3);
 }
 
-/* --- Hero Section (หน้าแรก) --- */
-.hero-section {
-    display: flex;
-    min-height: 420px;
-    background: linear-gradient(135deg, #f9fbfd 0%, #ffffff 100%);
-}
-
-.hero-left {
-    flex: 1.15;
-    padding: 60px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    line-height: 1.15;
-    color: #1a1a1a;
-    margin-bottom: 20px;
-}
-
-.hero-title span {
-    color: #4a9bd9;
-}
-
-.hero-desc {
-    font-size: 13.5px;
-    color: #666;
-    margin-bottom: 30px;
-    max-width: 400px;
-    line-height: 1.6;
-}
-
-.btn-primary {
-    display: inline-block;
-    background-color: #4a9bd9;
-    color: #ffffff;
-    padding: 12px 28px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 500;
-    width: fit-content;
-    box-shadow: 0 4px 12px rgba(74, 155, 217, 0.25);
-    transition: background-color 0.2s;
-}
-
-.btn-primary:hover {
-    background-color: #3b87c4;
-}
-
-.hero-right {
-    flex: 0.85;
-    background: linear-gradient(135deg, #4a9bd9 0%, #2c6e9f 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    font-size: 48px;
-}
-
-/* --- Content & Layout --- */
+/* Page Container */
 .page-container {
-    padding: 50px;
+    padding: 40px;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    color: #1a1a1a;
+    font-family: 'Prompt', sans-serif;
+    font-size: 28px;
+    color: var(--primary-blue);
     margin-bottom: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.section-title span {
-    color: #4a9bd9;
+/* Hero / Welcome Section (index.html) */
+.hero-section {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px dashed var(--soft-blue);
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.hero-desc {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img-box {
+    width: 100%;
+    max-width: 350px;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid var(--soft-blue);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.hero-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn-container {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(74, 139, 245, 0.3);
+    transition: 0.2s;
+}
+
+.btn-secondary {
+    background-color: var(--soft-blue);
+    color: var(--primary-blue);
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+/* Cards & Grid Layout (projects.html & about.html) */
+.info-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.info-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.8;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* บังคับแบ่ง 3 ช่องเท่ากันเป๊ะ */
-    gap: 25px;
-    margin-top: 30px;
-}
-
-/* หน้าจอมือถือให้ปรับเหลือ 1 ช่องอัตโนมัติ */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
 }
 
 .project-card {
-    border: 1px solid #edf2f7;
     background: #ffffff;
-    border-radius: 4px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: transform 0.2s;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 
-.card-banner {
-    background-color: #eaf4fb;
-    color: #4a9bd9;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
+.card-banner-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 .card-body h3 {
     font-size: 16px;
-    color: #222;
-    margin-bottom: 8px;
+    color: var(--text-dark);
+    margin-bottom: 6px;
 }
 
 .card-body p {
-    font-size: 12.5px;
-    color: #666;
-    line-height: 1.6;
+    font-size: 13px;
+    color: var(--text-muted);
 }
 
-/* Responsive สำหรับมือถือ */
+/* Footer Navigation Bar */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--soft-blue);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    body { padding: 0; }
-    header { flex-direction: column; gap: 15px; }
+    header { flex-direction: column; gap: 15px; text-align: center; }
     .hero-section { flex-direction: column; }
-    .hero-right { min-height: 200px; }
-    .page-container { padding: 30px 20px; }
-}
-/* คุมขนาดรูปภาพการ์ดในหน้า projects */
-.card-banner-img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover; /* ครอบตัดรูปให้อยู่ในกรอบสวยงาม ไม่เบี้ยว */
-    display: block;
-}
-
-/* คุมขนาดรูปภาพใหญ่ฝั่งขวาในหน้า index */
-.hero-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    .page-container { padding: 20px; }
 }
