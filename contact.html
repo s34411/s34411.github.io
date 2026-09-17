@@ -3,14 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | My Portfolio</title>
+    <title>Contact</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-center {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-center h1 {
+            margin-bottom: 35px;
+        }
+
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 300px;
+        }
+
+        .contact-list a {
+            display: block;
+            padding: 15px;
+            border: 1px solid #25345d;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #25345d;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .contact-list a:hover {
+            background: #25345d;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">My Portfolio</div>
 
@@ -23,50 +61,39 @@
     </nav>
 
 
-    <!-- Contact -->
-    <main class="contact-page">
+    <!-- CONTACT -->
+    <section class="contact-center">
 
-        <div class="page-header">
-            <p class="hero-subtitle">GET IN TOUCH</p>
-            <h1>Contact Me</h1>
-        </div>
+        <h1>Contact Me</h1>
 
-        <div class="contact-links">
+        <div class="contact-list">
 
-            <a href="https://instagram.com/ชื่อไอจีของคุณ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
+            <a href="https://www.instagram.com/ใส่ไอจีตรงนี้/"
+               target="_blank">
                 Instagram
             </a>
 
-            <a href="https://line.me/ti/p/~ไลน์ของคุณ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
+            <a href="https://line.me/ti/p/~ใส่ไลน์ตรงนี้"
+               target="_blank">
                 LINE
             </a>
 
-            <a href="https://github.com/ชื่อ GitHub ของคุณ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
+            <a href="https://github.com/ใส่ชื่อ-githubตรงนี้"
+               target="_blank">
                 GitHub
             </a>
 
-            <a href="https://facebook.com/ชื่อ Facebook ของคุณ"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="contact-link">
+            <a href="https://www.facebook.com/ใส่เฟซบุ๊กตรงนี้"
+               target="_blank">
                 Facebook
             </a>
 
         </div>
 
-    </main>
+    </section>
 
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
         <p>© 2026 My Portfolio</p>
     </footer>
