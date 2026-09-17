@@ -1,33 +1,121 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Home</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Home | My Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 
-    <!-- แถบเมนูนำทาง -->
-    <nav>
-        <div class="logo">PORTFOLIO</div>
-        <ul>
-            <li><a href="index.html" class="active">หน้าแรก</a></li>
-            <li><a href="about.html">เกี่ยวกับฉัน</a></li>
-            <li><a href="projects.html">ผลงาน</a></li>
-            <li><a href="contact.html">ติดต่อ</a></li>
-        </ul>
-    </nav>
+<!-- ================= NAVBAR ================= -->
 
-    <!-- ส่วนต้อนรับด้านบน -->
-    <header class="hero">
-        <!-- 📸 จุดใส่รูปโปรไฟล์หน้าแรก (เปลี่ยน profile.jpg เป็นชื่อไฟล์รูปของคุณ) -->
-        <img src="profile.jpg" alt="Profile Picture" class="hero-img">
-        
-        <h1>สวัสดีครับ/ค่ะ 👋</h1>
-        <p>ยินดีต้อนรับสู่พื้นที่แสดงผลงานและการออกแบบของฉัน</p>
-        <a href="projects.html" class="btn">ดูผลงานทั้งหมด</a>
-    </header>
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        My Portfolio
+    </a>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="portfolio.html">PORTFOLIO</a>
+        </li>
+
+        <li>
+            <a href="contact.html">CONTACT</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <small>
+                WELCOME TO MY PORTFOLIO
+            </small>
+
+            <h1>
+                Hello,<br>
+                I'm <span>YOU.</span>
+            </h1>
+
+            <p>
+                ยินดีต้อนรับเข้าสู่เว็บไซต์ Portfolio
+                ของฉัน ที่รวบรวมตัวตน ความสนใจ
+                และผลงานต่าง ๆ เอาไว้ในที่เดียว
+            </p>
+
+
+            <div class="button-group">
+
+                <a href="about.html" class="btn">
+                    ABOUT ME →
+                </a>
+
+                <a href="portfolio.html" class="btn second">
+                    MY WORK →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <!-- ⭐ ใส่รูปหลักตรงนี้ -->
+
+            <img
+                src="images/main.jpg"
+                alt="Main Photo"
+            >
+
+            <div class="sticker heart">
+                💙
+            </div>
+
+            <div class="sticker star">
+                ✦
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    © 2026 My Portfolio — Made with ♡
+
+</footer>
+
 
 </body>
+
 </html>
