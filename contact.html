@@ -3,45 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+
+    <title>Contact | My Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
     <style>
         .contact-center {
-            min-height: 70vh;
+            min-height: 72vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .contact-center h1 {
-            margin-bottom: 35px;
+        /* หัวข้อ */
+        .contact-title {
+            position: relative;
+            margin-bottom: 40px;
         }
 
+        .contact-small {
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+            opacity: 0.7;
+        }
+
+        .contact-title h1 {
+            font-family: Georgia, serif;
+            font-size: 52px;
+            margin: 0;
+        }
+
+        /* กล่องรวม */
         .contact-list {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            width: 300px;
+            gap: 16px;
+            width: 330px;
+            position: relative;
+            z-index: 2;
         }
 
+        /* ปุ่ม */
         .contact-list a {
-            display: block;
-            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 17px 22px;
+
             border: 1px solid #25345d;
-            border-radius: 30px;
+            border-radius: 4px;
+
             text-decoration: none;
             color: #25345d;
-            background: white;
-            transition: 0.3s;
+            background: #fffdf8;
+
+            font-size: 15px;
+            letter-spacing: 1px;
+
+            box-shadow: 5px 5px 0px #d9e3f2;
+
+            transition: 0.3s ease;
+        }
+
+        .contact-list a span {
+            font-size: 12px;
+            opacity: 0.6;
         }
 
         .contact-list a:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0px #25345d;
+            background: #eef4fb;
+        }
+
+        /* ของตกแต่ง */
+        .contact-star {
+            position: absolute;
+            top: 18%;
+            left: 25%;
+            font-size: 28px;
+            transform: rotate(-15deg);
+        }
+
+        .contact-heart {
+            position: absolute;
+            right: 25%;
+            bottom: 20%;
+            font-size: 25px;
+            transform: rotate(15deg);
+        }
+
+        .contact-line {
+            position: absolute;
+            width: 120px;
+            height: 1px;
             background: #25345d;
-            color: white;
+            opacity: 0.25;
+            top: 24%;
+            right: 20%;
+            transform: rotate(-12deg);
+        }
+
+        @media (max-width: 750px) {
+
+            .contact-title h1 {
+                font-size: 42px;
+            }
+
+            .contact-list {
+                width: 85%;
+                max-width: 330px;
+            }
+
+            .contact-star {
+                left: 10%;
+            }
+
+            .contact-heart {
+                right: 10%;
+            }
+
+            .contact-line {
+                right: 5%;
+            }
         }
     </style>
 </head>
@@ -50,7 +141,10 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">My Portfolio</div>
+
+        <div class="logo">
+            My Portfolio
+        </div>
 
         <div class="nav-menu">
             <a href="index.html">HOME</a>
@@ -58,34 +152,73 @@
             <a href="portfolio.html">PORTFOLIO</a>
             <a href="contact.html" class="active">CONTACT</a>
         </div>
+
     </nav>
 
 
     <!-- CONTACT -->
     <section class="contact-center">
 
-        <h1>Contact Me</h1>
+        <!-- ของตกแต่ง -->
+        <div class="contact-star">✦</div>
+        <div class="contact-heart">♡</div>
+        <div class="contact-line"></div>
+
+
+        <div class="contact-title">
+
+            <div class="contact-small">
+                LET'S CONNECT
+            </div>
+
+            <h1>Contact Me</h1>
+
+        </div>
+
 
         <div class="contact-list">
 
             <a href="https://www.instagram.com/ใส่ไอจีตรงนี้/"
-               target="_blank">
-                Instagram
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <strong>Instagram</strong>
+
+                <span>↗</span>
+
             </a>
+
 
             <a href="https://line.me/ti/p/~ใส่ไลน์ตรงนี้"
-               target="_blank">
-                LINE
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <strong>LINE</strong>
+
+                <span>↗</span>
+
             </a>
+
 
             <a href="https://github.com/ใส่ชื่อ-githubตรงนี้"
-               target="_blank">
-                GitHub
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <strong>GitHub</strong>
+
+                <span>↗</span>
+
             </a>
 
+
             <a href="https://www.facebook.com/ใส่เฟซบุ๊กตรงนี้"
-               target="_blank">
-                Facebook
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <strong>Facebook</strong>
+
+                <span>↗</span>
+
             </a>
 
         </div>
