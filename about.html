@@ -1,38 +1,174 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - About Me</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About | My Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <nav>
-        <div class="logo">PORTFOLIO</div>
-        <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="about.html" class="active">เกี่ยวกับฉัน</a></li>
-            <li><a href="projects.html">ผลงาน</a></li>
-            <li><a href="contact.html">ติดต่อ</a></li>
-        </ul>
-    </nav>
 
-    <main class="content">
-        <h1>เกี่ยวกับฉัน (About Me)</h1>
-        
-        <div class="about-grid">
-            <!-- 📸 จุดใส่รูปถ่าย หรือรูปพอร์ตแนะนำตัว -->
-            <img src="about-me.jpg" alt="About Me Image" class="about-img">
+<!-- ================= NAVBAR ================= -->
 
-            <div class="about-text">
-                <h2>ข้อมูลส่วนตัว & ทักษะ</h2>
-                <p>แนะนำตัวเอง สไตล์งานที่ชอบ ความถนัด และโปรแกรมที่ใช้คล่อง เช่น Blender, Adobe Photoshop, Illustrator ฯลฯ</p>
-                <br>
-                <a href="index.html" class="btn-back">← กลับหน้าแรก</a>
-            </div>
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        My Portfolio
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                HOME
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                ABOUT
+            </a>
+        </li>
+
+        <li>
+            <a href="portfolio.html">
+                PORTFOLIO
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                CONTACT
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+
+    <section class="page-title">
+
+        <h1>
+            About Me
+        </h1>
+
+        <p>
+            A little story about me
+        </p>
+
+    </section>
+
+
+    <section class="about-box">
+
+
+        <div class="about-image">
+
+            <!-- ⭐ ใส่รูปตัวเองตรงนี้ -->
+
+            <img
+                src="images/profile.jpg"
+                alt="Profile Photo"
+            >
+
         </div>
-    </main>
+
+
+        <div class="about-text">
+
+            <small>
+                HELLO THERE!
+            </small>
+
+
+            <h2>
+                I'm Your Name.
+            </h2>
+
+
+            <p>
+                สวัสดี เราชื่อ __________
+                เป็นนักเรียนที่มีความสนใจในด้าน
+                การออกแบบ เทคโนโลยี และการสร้างสรรค์
+                ผลงานต่าง ๆ
+            </p>
+
+
+            <p>
+                เราชอบเรียนรู้สิ่งใหม่ ๆ และนำความคิด
+                ของตัวเองมาสร้างเป็นผลงาน
+                เว็บไซต์นี้จึงเป็นพื้นที่สำหรับรวบรวม
+                เรื่องราวและผลงานของเรา
+            </p>
+
+
+            <div class="info">
+
+                <div>
+                    <strong>NAME</strong>
+                    <span>Your Name</span>
+                </div>
+
+                <div>
+                    <strong>AGE</strong>
+                    <span>17</span>
+                </div>
+
+                <div>
+                    <strong>INTEREST</strong>
+                    <span>Design & Technology</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <div class="page-navigation">
+
+        <a href="index.html">
+            ← HOME
+        </a>
+
+        <a href="portfolio.html">
+            PORTFOLIO →
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    © 2026 My Portfolio
+
+</footer>
+
 
 </body>
+
 </html>
