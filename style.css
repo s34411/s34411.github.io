@@ -330,30 +330,48 @@ body {
 
     transition: 0.3s ease;
 }
+/* ================= เอียงการ์ด ================= */
 
-/* ทำให้แต่ละใบมีองศาต่างกันนิด ๆ */
+.work-card:nth-child(1) {
+    transform: rotate(-1deg);
+}
+
 .work-card:nth-child(2) {
-    transform: translateY(18px) rotate(1.5deg);
+    transform: rotate(1.2deg);
 }
 
 .work-card:nth-child(3) {
     transform: rotate(-1.5deg);
 }
 
+.work-card:nth-child(4) {
+    transform: rotate(1.3deg);
+}
+
 .work-card:nth-child(5) {
-    transform: translateY(18px) rotate(-1deg);
+    transform: rotate(-0.8deg);
 }
 
 .work-card:nth-child(6) {
     transform: rotate(1.5deg);
 }
 
+.work-card:nth-child(7) {
+    transform: rotate(-1.3deg);
+}
+
 .work-card:nth-child(8) {
-    transform: translateY(18px) rotate(1deg);
+    transform: rotate(0.9deg);
 }
 
 .work-card:nth-child(9) {
-    transform: rotate(-1.5deg);
+    transform: rotate(-1.2deg);
+}
+
+/* Hover */
+.work-card:hover {
+    transform: translateY(-8px) rotate(0deg);
+    box-shadow: 10px 10px 0 #b9cbed;
 }
 
 .work-card:hover {
