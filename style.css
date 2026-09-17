@@ -316,109 +316,161 @@ body {
 
 .portfolio-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px 28px;
-    margin-bottom: 100px;
+
+    gap: 30px;
+
+    margin-bottom: 80px;
+
+    padding: 5px;
 }
+
+
+/* ================= WORK CARD ================= */
 
 .work-card {
     padding: 10px;
+
     background: white;
 
     border: 1px solid #d4def0;
+
     box-shadow: 7px 7px 0 #c4d3ef;
 
-    transition: 0.3s ease;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
-/* ================= เอียงการ์ด ================= */
 
+
+/* ================= เอียงทั้ง 9 ใบ ================= */
+
+/* ใบ 1 */
 .work-card:nth-child(1) {
-    transform: rotate(-1deg);
+    transform: rotate(-1.2deg);
 }
 
+/* ใบ 2 */
 .work-card:nth-child(2) {
-    transform: rotate(1.2deg);
+    transform: rotate(1.3deg);
 }
 
+/* ใบ 3 */
 .work-card:nth-child(3) {
     transform: rotate(-1.5deg);
 }
 
+/* ใบ 4 */
 .work-card:nth-child(4) {
-    transform: rotate(1.3deg);
+    transform: rotate(1.4deg);
 }
 
+/* ใบ 5 */
 .work-card:nth-child(5) {
-    transform: rotate(-0.8deg);
+    transform: rotate(-1deg);
 }
 
+/* ใบ 6 */
 .work-card:nth-child(6) {
-    transform: rotate(1.5deg);
+    transform: rotate(1.2deg);
 }
 
+/* ใบ 7 */
 .work-card:nth-child(7) {
+    transform: rotate(-1.4deg);
+}
+
+/* ใบ 8 */
+.work-card:nth-child(8) {
+    transform: rotate(1deg);
+}
+
+/* ใบ 9 */
+.work-card:nth-child(9) {
     transform: rotate(-1.3deg);
 }
 
-.work-card:nth-child(8) {
-    transform: rotate(0.9deg);
-}
 
-.work-card:nth-child(9) {
-    transform: rotate(-1.2deg);
-}
+/* ================= HOVER ================= */
 
-/* Hover */
 .work-card:hover {
     transform: translateY(-8px) rotate(0deg);
+
     box-shadow: 10px 10px 0 #b9cbed;
 }
 
-.work-card:hover {
-    transform: translateY(-8px) rotate(0);
-    box-shadow: 10px 10px 0 #b9cbed;
-}
+
+/* ================= รูป ================= */
 
 .work-card img {
+    display: block;
+
     width: 100%;
     height: 250px;
+
     object-fit: cover;
+
+    background: #dbe5f8;
 }
+
+
+/* ================= เนื้อหา ================= */
 
 .work-content {
     padding: 14px 8px 12px;
 }
 
+
+/* เลข PHOTO */
+
 .work-number {
     color: #7890bf;
+
     font-size: 9px;
+
     letter-spacing: 2px;
 }
 
+
+/* ชื่อผลงาน */
+
 .work-content h2 {
     font-family: 'Playfair Display', serif;
+
     font-size: 24px;
+
     margin: 7px 0;
 }
 
+
+/* รายละเอียด */
+
 .work-content p {
     color: #747e96;
+
     font-size: 12px;
+
     line-height: 1.7;
 }
 
+
+/* TAG */
+
 .tag {
     display: inline-block;
+
     margin-top: 10px;
+
     padding: 5px 9px;
 
     background: #e8efff;
+
     color: #6178ad;
 
     font-size: 9px;
+
     letter-spacing: 1px;
 }
-
 /* ================= CONTACT ================= */
 
 .contact-box {
@@ -585,19 +637,26 @@ footer {
 
     .navbar {
         flex-direction: column;
+
         gap: 15px;
+
         padding: 15px;
     }
 
     .nav-menu {
         gap: 14px;
+
         justify-content: center;
+
         flex-wrap: wrap;
     }
 
+
     .hero {
         grid-template-columns: 1fr;
+
         gap: 40px;
+
         padding: 60px 0;
     }
 
@@ -613,38 +672,51 @@ footer {
         height: 350px;
     }
 
+
     .about-box {
         grid-template-columns: 1fr;
+
         padding: 25px;
     }
+
 
     .contact-box {
         grid-template-columns: 1fr;
+
         padding: 25px;
     }
 
-    /* PORTFOLIO บนมือถือ */
+
+    /* ================= PORTFOLIO MOBILE ================= */
+
     .portfolio-grid {
         grid-template-columns: 1fr;
+
         gap: 25px;
+
+        padding: 0;
     }
 
-    .work-card {
-        width: 100%;
-    }
 
+    /* บนมือถือให้ตรง ไม่เอียง */
+
+    .work-card:nth-child(1),
     .work-card:nth-child(2),
     .work-card:nth-child(3),
+    .work-card:nth-child(4),
     .work-card:nth-child(5),
     .work-card:nth-child(6),
+    .work-card:nth-child(7),
     .work-card:nth-child(8),
     .work-card:nth-child(9) {
         transform: none;
     }
 
+
     .work-card img {
         height: 250px;
     }
+
 
     .page-header h1 {
         font-size: 45px;
