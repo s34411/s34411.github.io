@@ -1,35 +1,221 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Contact</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | My Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <nav>
-        <div class="logo">PORTFOLIO</div>
-        <ul>
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="about.html">เกี่ยวกับฉัน</a></li>
-            <li><a href="projects.html">ผลงาน</a></li>
-            <li><a href="contact.html" class="active">ติดต่อ</a></li>
-        </ul>
-    </nav>
 
-    <main class="content">
-        <h1>ช่องทางการติดต่อ (Contact)</h1>
-        
-        <div class="contact-box">
-            <p>📧 Email: your-email@example.com</p>
-            <p>🎨 Behance: <a href="https://www.behance.net" target="_blank" style="color: #0070f3;">behance.net/yourprofile</a></p>
-            <p>🌐 GitHub: github.com/yourusername</p>
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        My Portfolio
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">
+                HOME
+            </a>
+        </li>
+
+        <li>
+            <a href="about.html">
+                ABOUT
+            </a>
+        </li>
+
+        <li>
+            <a href="portfolio.html">
+                PORTFOLIO
+            </a>
+        </li>
+
+        <li>
+            <a href="contact.html">
+                CONTACT
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+
+    <section class="page-title">
+
+        <h1>
+            Contact Me
+        </h1>
+
+        <p>
+            Let's connect!
+        </p>
+
+    </section>
+
+
+    <section class="contact-box">
+
+
+        <div class="contact-info">
+
+            <small>
+                GET IN TOUCH
+            </small>
+
+
+            <h2>
+                Let's talk.
+            </h2>
+
+
+            <p>
+                หากสนใจผลงาน หรือต้องการพูดคุย
+                สามารถติดต่อผ่านช่องทางด้านล่างได้เลย
+            </p>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    EMAIL
+                </strong>
+
+                <p>
+                    your@email.com
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    INSTAGRAM
+                </strong>
+
+                <p>
+                    @yourusername
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>
+                    LINE
+                </strong>
+
+                <p>
+                    yourline
+                </p>
+
+            </div>
+
+
         </div>
 
-        <br>
-        <a href="index.html" class="btn-back">← กลับหน้าแรก</a>
-    </main>
+
+        <div class="contact-form">
+
+            <form onsubmit="sendMessage(event)">
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+
+                <textarea
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    SEND MESSAGE
+                </button>
+
+            </form>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <div class="page-navigation">
+
+        <a href="portfolio.html">
+            ← PORTFOLIO
+        </a>
+
+        <a href="index.html">
+            HOME →
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+
+    © 2026 My Portfolio
+
+</footer>
+
+
+<script>
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    alert("ขอบคุณสำหรับข้อความ 💙");
+
+}
+
+</script>
+
 
 </body>
+
 </html>
